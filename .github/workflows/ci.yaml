@@ -9,5 +9,13 @@ jobs:
             - name: show current time
               run: date
             - name: list files in current directory
-              run: ls -la    
+              run: ls -la  
+            - name: print workflow event
+              run: echo "${{ toJson(github.event_name )}} 
+            - name: refrence github context
+              run: echo "The repository is ${{ github.repository }}"  
+            - name: show github workspace
+              run: echo "The github workspace is ${{ github.workspace }}"
+            - name: show github os
+              run: echo "The github os is ${{ runner.os }}"       
              
