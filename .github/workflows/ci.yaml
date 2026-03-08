@@ -1,5 +1,7 @@
 name: CI pipline
-on: push   
+on:
+  schedule:
+    - cron: '* * * * *' # Run every day at midnight   
 jobs:
     build:
         runs-on: ubuntu-latest
